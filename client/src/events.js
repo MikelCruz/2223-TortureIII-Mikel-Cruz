@@ -16,6 +16,9 @@ function btnStartDown ()
     document.getElementById('sectionStart').style.display = "none";
 
     requestAnimationFrame(gameLoop);
+
+    // al pulsar el boton se llama al get de toda la informacion de las pociones
+    getAllIngredients();
 }
 
 
@@ -28,6 +31,47 @@ function canvasMousedownHandler()
 function canvasMouseupHandler(event)
 {
     globals.action.mousePressed = false;
+}
+
+
+function getAllIngredients()
+{
+    // console.log("entra en getAllUsers");
+    const url = "https://raw.githubusercontent.com/zsiciarz/skyrim-alchemy-toolbox/master/data/ingredients.json";
+    const request = new XMLHttpRequest();
+
+    request.onreadystatechange = function()
+    {
+
+        if (this.readyState == 4)
+        {
+            if(this.status == 200)
+            {
+
+                // console.log("entra");
+                // console.log (this.responseText);
+                if (this.responseText != null)
+                {
+                    // console.log(this.responseText);
+                    const resultJSON = JSON.parse(this.responseText);
+                    // console.log(resultJSON);
+                    //Guardamos los datos del resultJSON
+                    globals.getAllIngredients = resultJSON;
+                    // createList();
+                    console.log(globals.getAllIngredients);
+                    // console.log("this.responetext" + this.responseText);
+                    // console.log(globals.all_users);
+                }
+                else  
+                    alert("Comunication error: No data received");
+            }
+            else 
+                alert ( "Communication error: " + this.statusText);
+        }
+    }
+    request.open ('GET', url, true);
+    request.responseType = "text";
+    request.send();
 }
 
 

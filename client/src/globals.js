@@ -27,4 +27,7 @@ export default
 
     //mouse events
     action:{},
+
+    //Array que recoge toda la informacion del .JSON de ingredientes
+    getAllIngredients: [],
 }
