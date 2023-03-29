@@ -24,7 +24,7 @@ body{
 
     margin-left: 400px;
     /* margin-right: auto; */
-    margin-top: 380px;
+    margin-top: 680px;
 
     width: 50%;
     height: 60px;
@@ -51,4 +51,26 @@ body{
 #ingredientsNames{
 
     color: red;
+}
+
+#ingredientsEffects{
+    color: purple;
+}
+
+#ingredientsValue{
+    color: orange;
+}
+
+#ingredientsWeight{
+    color: blueviolet;
+}
+
+body{
+    /* margin-left: 200px; */
+    image-resolution: 200px;
+}
+
+#divPotion
+{
+    margin-left: 200px;
 }

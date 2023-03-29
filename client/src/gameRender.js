@@ -10,30 +10,56 @@ function renderIngredients()
 {
     // console.log("entra3");
 
-    for (let i = 0; i < 1; i++)
+    //falta meter los numeros random a las i de dentro de los ingredientes
+    //Estan echos en esquemas
+
+    for (let i = 0; i < 4; i++)
     {
         // console.log("entraa")
         // globals.getAllIngredients.ingredients.length
-        const ingredient = globals.getAllIngredients.ingredients[i];
+        const image     = globals.getAllIngredients.ingredients[i].image;
+        const name      = globals.getAllIngredients.ingredients[i].name;
+        const effect    = globals.getAllIngredients.ingredients[i].effect;
+        const value     = globals.getAllIngredients.ingredients[i].value;
+        const weigth    = globals.getAllIngredients.ingredients[i].weigth;
+
         // console.log(ingredient);
-        renderIngredient(ingredient);
+
+        renderIngredient(name, image, effect, value, weigth);
     }
     
 }
 
-function renderIngredient(ingredient)
+function renderIngredient(name, image, effect, value, weigth)
 {
     console.log("entra en renderIngredient");
 
-   const elemento = document.getElementById("ingredients");
-   elemento.innerHTML = "Texto final";
-   
-    // globals.ctx.fillStyle = 'green';
-    // // globals.ctx.fillRect(20, 20, 80, 80);
-    // globals.ctx.font = '12px arial';
-    // globals.ctx.fillStyle = 'white';
+    // IMAGENES - DONE - 4 imagenes
+    const img = document.createElement('img');
+    img.src = image;
+    document.body.appendChild(img);
 
-    // globals.ctx.fillText(ingredient.name, 20, 20 + 20);
+
+    // NOMBRES
+    const elemento = document.getElementById('ingredientsNames');
+    elemento.innerHTML = name;
+    
+    
+
+    //Effectos
+    // for (let i = 0; i < effect.length; i++)
+    // {
+        const Effecto = document.getElementById('ingredientsEffects');
+        Effecto.innerHTML = effect;
+    // }
+
+    //Value
+    const Valor = document.getElementById('ingredientsValue');
+    Valor.innerHTML = "Value: " + value;
+
+    //Weight
+    const Peso = document.getElementById('ingredientsWeight');
+    Peso.innerHTML = "Weigth: " + weigth;
 }
 
 
