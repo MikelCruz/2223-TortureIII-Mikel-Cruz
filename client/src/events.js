@@ -14,6 +14,8 @@ function btnStartDown ()
     globals.buttonStart.style.visibility = "Hidden";
     globals.buttonCreatePotion.style.visibility = "visible";
 
+    // document.getElementById('divPotion').style.display = "block";
+
     document.getElementById('sectionStart').style.display = "none";
 
     // al pulsar el boton se llama al get de toda la informacion de las pociones

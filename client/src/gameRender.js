@@ -15,21 +15,25 @@ function renderIngredients()
         // console.log("entraa")
         // globals.getAllIngredients.ingredients.length
         const ingredient = globals.getAllIngredients.ingredients[i];
-        console.log(ingredient);
-        // renderIngredient(ingredient);
+        // console.log(ingredient);
+        renderIngredient(ingredient);
     }
     
 }
 
 function renderIngredient(ingredient)
 {
+    console.log("entra en renderIngredient");
 
-    globals.ctx.fillStyle = 'green';
-    globals.ctx.fillRect(20, 20, 80, 80);
-    globals.ctx.font = '12px arial';
-    globals.ctx.fillStyle = 'white';
+   const elemento = document.getElementById("contenedor");
+   elemento.innerHTML = "Texto final";
+   
+    // globals.ctx.fillStyle = 'green';
+    // // globals.ctx.fillRect(20, 20, 80, 80);
+    // globals.ctx.font = '12px arial';
+    // globals.ctx.fillStyle = 'white';
 
-    globals.ctx.fillText(ingredient.name, 20, 20 + 20);
+    // globals.ctx.fillText(ingredient.name, 20, 20 + 20);
 }
 
 

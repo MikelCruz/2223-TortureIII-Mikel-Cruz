@@ -14,6 +14,7 @@ function initHTMLelements()
     //Inicializamos el boton de Create Potion a oculto
     globals.buttonCreatePotion.style.visibility = "Hidden";
 
+
     //Al pulsar el boton
     globals.buttonStart.addEventListener("mousedown", btnStartDown, false);
     globals.buttonCreatePotion.addEventListener("mousedown", btnCreationOfPotions, false);
