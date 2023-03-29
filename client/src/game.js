@@ -1,4 +1,4 @@
-
+import { initEvents, initHTMLelements, initVars, loadAssets,  } from "./initialize.js";
 
 // GAME INIT
 
@@ -8,11 +8,11 @@ function init()
 {
     initHTMLelements();
 
-    loadAssets();
+    // loadAssets();
 
-    initEvents();
+    // initEvents();
 
-    initVars();
+    // initVars();
 
 }
 
@@ -38,7 +38,7 @@ function gameLoop(timeStamp)
         //Render que Utilizare más adelante para dibujar las imagenes 
         // render();
 
-        
+
         globals.deltaTime -= globals.frameTimeObj;
     }
 

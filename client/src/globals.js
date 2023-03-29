@@ -20,4 +20,8 @@ export default
     //Carga de Assets
     assetsToLoad: [],
     assetsLoaded: 0,
+
+
+    //Boton Start
+    buttonStart: {},
 }
