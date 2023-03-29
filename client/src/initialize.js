@@ -37,9 +37,7 @@ function initVars()
 
 // function initEvents()
 // {
-//     //Add the event listeners
-//     globals.canvas.addEventListener("mouseup",   canvasMouseupHandler, false);
-//     globals.canvas.addEventListener("mousedown", canvasMousedownHandler, false);
+
 // }
 
 export {
