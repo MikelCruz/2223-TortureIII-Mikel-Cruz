@@ -12,6 +12,7 @@ function btnStartDown ()
 
     // Ocultamos el boton start
     globals.buttonStart.style.visibility = "Hidden";
+    globals.buttonCreatePotion.style.visibility = "visible";
 
     document.getElementById('sectionStart').style.display = "none";
 
@@ -19,6 +20,12 @@ function btnStartDown ()
 
     // al pulsar el boton se llama al get de toda la informacion de las pociones
     getAllIngredients();
+}
+
+function btnCreationOfPotions()
+{
+    
+    console.log("Se pulsa creacion");
 }
 
 
@@ -81,4 +88,5 @@ export{
     btnStartDown,
     canvasMousedownHandler,
     canvasMouseupHandler,
+    btnCreationOfPotions,
 }

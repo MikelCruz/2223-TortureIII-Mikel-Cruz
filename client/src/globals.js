@@ -22,8 +22,15 @@ export default
     assetsLoaded: 0,
 
 
-    //Boton Start
+    // ===================
+    // BUTTONS
+    //===================
+
+    //Start
     buttonStart: {},
+
+    // Create Potion
+    buttonCreatePotion: {},
 
     //mouse events
     action:{},

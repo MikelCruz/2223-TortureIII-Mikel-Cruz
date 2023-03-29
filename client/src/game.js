@@ -1,6 +1,6 @@
-// import { initEvents, initHTMLelements, initVars, loadAssets,  } from "./initialize.js";
+// import { initEvents, initHTMLelements, initVars,  } from "./initialize.js";
+import { initHTMLelements, initVars,  } from "./initialize.js";
 
-import {initHTMLelements} from "./initialize.js";
 import globals from "./globals.js";
 import { State } from "./constants.js";
 
@@ -16,7 +16,7 @@ function init()
 
     // initEvents();
 
-    // initVars();
+    initVars();
 
 }
 
