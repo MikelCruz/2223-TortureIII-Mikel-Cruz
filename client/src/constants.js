@@ -5,3 +5,7 @@ const State = {
     DONE:       2,          //Pociones terminadas y listas para ser mostradas
 
 }
+
+export {
+    State,
+}
