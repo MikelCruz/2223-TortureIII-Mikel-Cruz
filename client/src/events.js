@@ -15,7 +15,7 @@ function btnStartDown ()
 
     document.getElementById('sectionStart').style.display = "none";
 
-    requestAnimationFrame(gameLoop);
+    // requestAnimationFrame(gameLoop);
 
     // al pulsar el boton se llama al get de toda la informacion de las pociones
     getAllIngredients();
