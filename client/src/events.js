@@ -1,4 +1,3 @@
-import { gameLoop } from "./game.js";
 import globals from "./globals.js";
 import { State } from "./constants.js";
 
@@ -15,8 +14,6 @@ function btnStartDown ()
     globals.buttonCreatePotion.style.visibility = "visible";
 
     document.getElementById('sectionStart').style.display = "none";
-
-    // requestAnimationFrame(gameLoop);
 
     // al pulsar el boton se llama al get de toda la informacion de las pociones
     getAllIngredients();
