@@ -24,4 +24,7 @@ export default
 
     //Boton Start
     buttonStart: {},
+
+    //mouse events
+    action:{},
 }

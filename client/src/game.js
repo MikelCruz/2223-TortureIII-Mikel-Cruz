@@ -1,4 +1,8 @@
-import { initEvents, initHTMLelements, initVars, loadAssets,  } from "./initialize.js";
+// import { initEvents, initHTMLelements, initVars, loadAssets,  } from "./initialize.js";
+
+import {initHTMLelements} from "./initialize.js";
+import globals from "./globals.js";
+import { State } from "./constants.js";
 
 // GAME INIT
 
@@ -42,8 +46,9 @@ function gameLoop(timeStamp)
         globals.deltaTime -= globals.frameTimeObj;
     }
 
-    if(globals.gameState === State.PLAYING)
+    if(globals.gameState === State.MAKING)
     {
+        console.log("GameState Making"),
         requestAnimationFrame(gameLoop);
     }
 
