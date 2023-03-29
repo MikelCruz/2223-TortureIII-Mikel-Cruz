@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+    background-image: url("../images/background.jpg");
+    background-size: 1920px 1080px;
+}   
+
+#btnStart{
+    margin-left: 400px;
+    /* margin-right: auto; */
+    margin-top: 380px;
+
+    width: 50%;
+    height: 60px;
+    border-radius: 40px;
+    background: lightsalmon;
+    border: none;
+    /* outline: none; */
+
+    font-size: 30px;
+    font-weight: 60;
+}
