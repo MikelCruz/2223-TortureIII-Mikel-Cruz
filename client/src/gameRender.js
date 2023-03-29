@@ -25,7 +25,7 @@ function renderIngredient(ingredient)
 {
     console.log("entra en renderIngredient");
 
-   const elemento = document.getElementById("contenedor");
+   const elemento = document.getElementById("ingredients");
    elemento.innerHTML = "Texto final";
    
     // globals.ctx.fillStyle = 'green';

@@ -25,8 +25,12 @@ function btnStartDown ()
 
 function btnCreationOfPotions()
 {
-    render();
     console.log("Se pulsa creacion");
+
+    document.getElementById('divPotion').style.display = "block";
+
+    render();
+    
 }
 
 

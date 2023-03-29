@@ -38,7 +38,17 @@ body{
 
 }
 
-#contenedor{
+#ingredients{
     color: white;
     font-size: 30px;
+}
+
+#ingredientsImages{
+
+    color: aqua;
+}
+
+#ingredientsNames{
+
+    color: red;
 }
