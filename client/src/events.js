@@ -29,7 +29,7 @@ function btnCreationOfPotions()
 {
     console.log("Se pulsa creacion");
 
-    
+    createPotion();
 }
 
 
@@ -81,6 +81,66 @@ function getAllIngredients()
     request.open ('GET', url, true);
     request.responseType = "text";
     request.send();
+}
+
+
+function createPotion()
+{
+    //FALTA RENDERIZARLOS Y QUE LOS INGREDIENTES DE LA FUNCION SEAN ALEATORIOS (Aleatorios a la hora de seleccionarlos)
+
+    const numRandom1 = Math.floor(Math.random() * 4 +1)
+    const numRandom2 = Math.floor(Math.random() * 4 +1)
+
+    const ingrediente1 = globals.selectedIngredients[numRandom1];
+    const ingrediente2 = globals.selectedIngredients[numRandom2];
+    const effect = 2;
+
+    //Tienen hasta 4 effectos
+    // console.log(ingrediente1[effect][1]);
+    console.log(globals.selectedIngredients)
+
+    //Comprobamos todos los efectos para ver si tienen alguno en comun
+    for(let i = 0; i < 4; i++)
+    {
+        for (let j = 0; j < 4; j++)
+        {
+            if (ingrediente1[effect][i] === ingrediente2[effect][j])
+            {
+                // console.log("entra en la funcion");
+                //Contador para ver cauntos ingredientes en comun tienen
+                globals.commonIngredientEffect++;
+                globals.effectName = ingrediente1[effect][i]
+                // console.log(globals.commonIngredientEffect);
+            }
+        }
+    }
+
+    //Si los dos ingredientes tienen1 efecto en comun 
+    if (globals.commonIngredientEffect > 1)
+    {
+        // console.log("Tienen: " + globals.commonIngredientEffect + " Efectos en común")
+        globals.commonIngredientEffect = 0 //Reiniciamos el valor
+        console.log("Potion of " + globals.effectName);
+        globals.globals.effectName = ""; //Reiniciamos el valor 
+        //FALTA EL RENDER
+    }
+
+    //Si los dos ingredientes tienen mas de un efecto en comun 
+    else if (globals.commonIngredientEffect > 1)
+    {
+        // console.log("Tiene: " + globals.commonIngredientEffect + " Efecto en común");
+        globals.commonIngredientEffect = 0 //Reiniciamos el valor
+        console.log("Potion of " + globals.effectName); 
+        globals.globals.effectName = ""; //Reiniciamos el valor
+        //FALTA EL RENDER
+    }
+
+    //Si los ingredientes no tienen efectos en comun
+    else
+    {
+        console.log("no Tiene efectos en común ")
+        //PONER QUE LA POCION HA SIDO FALLIDA
+    }
 }
 
 
