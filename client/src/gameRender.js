@@ -12,9 +12,12 @@ function renderIngredients()
 
     //falta meter los numeros random a las i de dentro de los ingredientes
     //Estan echos en esquemas
+    
 
     for (let i = 0; i < 4; i++)
     {
+        // let randomNum
+        // Math.floor(Math.random(randomNum) + i)
         // console.log("entraa")
         // globals.getAllIngredients.ingredients.length
         const image     = globals.getAllIngredients.ingredients[i].image;
@@ -32,6 +35,8 @@ function renderIngredients()
 
 function renderIngredient(name, image, effect, value, weigth)
 {
+    //Mejor utilizar AppendChild en todo 
+
     console.log("entra en renderIngredient");
 
     // IMAGENES - DONE - 4 imagenes
@@ -39,25 +44,25 @@ function renderIngredient(name, image, effect, value, weigth)
     img.src = image;
     document.body.appendChild(img);
 
-
-    // NOMBRES
+    // Names
+    // const elemento2 = document.createElement('p');
+    // elemento2 = name;
+    // document.body.appendChild(elemento2);
+    
+    // Element
     const elemento = document.getElementById('ingredientsNames');
     elemento.innerHTML = name;
     
+    // Efect
+    const Effecto = document.getElementById('ingredientsEffects');
+    Effecto.innerHTML = effect;
     
 
-    //Effectos
-    // for (let i = 0; i < effect.length; i++)
-    // {
-        const Effecto = document.getElementById('ingredientsEffects');
-        Effecto.innerHTML = effect;
-    // }
-
-    //Value
+    // Value
     const Valor = document.getElementById('ingredientsValue');
     Valor.innerHTML = "Value: " + value;
 
-    //Weight
+    // Weight
     const Peso = document.getElementById('ingredientsWeight');
     Peso.innerHTML = "Weigth: " + weigth;
 }

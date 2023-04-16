@@ -21,15 +21,14 @@ function btnStartDown ()
     // al pulsar el boton se llama al get de toda la informacion de las pociones
     getAllIngredients();
 
+    document.getElementById('divPotion').style.display = "block";
+
 }
 
 function btnCreationOfPotions()
 {
     console.log("Se pulsa creacion");
 
-    document.getElementById('divPotion').style.display = "block";
-
-    render();
     
 }
 
@@ -70,6 +69,7 @@ function getAllIngredients()
                     // console.log(globals.getAllIngredients.ingredients);
                     // console.log(globals.getAllIngredients.ingredients[0].value);
                     
+                    render();
                 }
                 else  
                     alert("Comunication error: No data received");
