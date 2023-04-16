@@ -14,7 +14,7 @@ function renderIngredients()
     //Estan echos en esquemas
     
 
-    for (let i = 0; i < 4; i++)
+    for (let i = 8; i < 12; i++)
     {
         // let randomNum
         // Math.floor(Math.random(randomNum) + i)
