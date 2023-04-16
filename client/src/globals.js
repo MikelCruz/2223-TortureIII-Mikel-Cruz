@@ -44,5 +44,11 @@ export default
     // Si los dos ingredientes no tienen nigun efecto en com,un. la pocion resultante sera fallida
 
     //Array que guarda los ingredientes seleccionados
-    selectedIngredients: []
+    selectedIngredients: [],
+
+    //Global que almacena cuantos effecctos en comun hay
+    commonIngredientEffect: 0,
+
+    //Global que guarda el nombre del efecto
+    effectName: "",
 }
