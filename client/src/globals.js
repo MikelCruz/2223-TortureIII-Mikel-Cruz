@@ -43,6 +43,6 @@ export default
     // Si los dos ingredientes tienen mas de un efecto enm comun el efecto resultante de la pocion sera uno de los que obtenga, a escoger
     // Si los dos ingredientes no tienen nigun efecto en com,un. la pocion resultante sera fallida
 
-    //Array que guarda los efectos seleccioandos para comprarlos mas adelante
-    selectedIngredient_effects: []
+    //Array que guarda los ingredientes seleccionados
+    selectedIngredients: []
 }
