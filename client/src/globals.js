@@ -37,4 +37,12 @@ export default
 
     //Array que recoge toda la informacion del .JSON de ingredientes
     getAllIngredients: [],
+
+    
+    // (4 efectos a comporar) - Si los dos ingredientes escogidos al azar tienen un efecto en comun --> El efecto resultante de la pocion sera un efecto comun 
+    // Si los dos ingredientes tienen mas de un efecto enm comun el efecto resultante de la pocion sera uno de los que obtenga, a escoger
+    // Si los dos ingredientes no tienen nigun efecto en com,un. la pocion resultante sera fallida
+
+    //Array que guarda los efectos seleccioandos para comprarlos mas adelante
+    selectedIngredient_effects: []
 }

@@ -46,23 +46,33 @@ body{
 #ingredientsImages{
 
     color: aqua;
+    width: 350px;
+    /* height: 350px; */
 }
 
 #ingredientsNames{
 
     color: red;
+    display: flex;
 }
 
 #ingredientsEffects{
     color: purple;
+    display: flex;
 }
 
 #ingredientsValue{
     color: orange;
+    display: flex;
 }
 
 #ingredientsWeight{
     color: blueviolet;
+    display: flex;
+}
+
+#parrafo1{
+    background-color: blue;
 }
 
 body{

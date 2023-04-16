@@ -40,14 +40,19 @@ function renderIngredient(name, image, effect, value, weigth)
     console.log("entra en renderIngredient");
 
     // IMAGENES - DONE - 4 imagenes
-    const img = document.createElement('img');
+    // const img = document.createElement('img');
+    const img = new Image();
     img.src = image;
-    document.body.appendChild(img);
+    document.getElementById('ingredientsImages').appendChild(img);
+    
+    //Para agregarlo con innerHTML
+    // document.getElementById("ID_del_div").innerHTML='<img src="./direccion_imagen.jpg" />';
 
     // Names
     // const elemento2 = document.createElement('p');
-    // elemento2 = name;
-    // document.body.appendChild(elemento2);
+    // let Name = document.createElement('H3');
+    // Name = name;
+    // document.getElementById('ingredientsNames').innerHTML = name;
     
     // Element
     const elemento = document.getElementById('ingredientsNames');
