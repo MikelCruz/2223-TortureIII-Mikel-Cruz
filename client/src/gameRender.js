@@ -22,13 +22,17 @@ function renderIngredients()
         // globals.getAllIngredients.ingredients.length
         const image     = globals.getAllIngredients.ingredients[i].image;
         const name      = globals.getAllIngredients.ingredients[i].name;
-        const effect    = globals.getAllIngredients.ingredients[i].effect;
+        const effect    = globals.getAllIngredients.ingredients[i].effects;
         const value     = globals.getAllIngredients.ingredients[i].value;
-        const weigth    = globals.getAllIngredients.ingredients[i].weigth;
+        const weigth    = globals.getAllIngredients.ingredients[i].weight;
 
         // console.log(ingredient);
 
         renderIngredient(name, image, effect, value, weigth);
+
+        //Guardamos el ingrediente en un array de ingredientes (4 en total).
+        const SelectedIngredient = [image, name, effect, value, weigth];
+        globals.selectedIngredients.push(SelectedIngredient)
     }
     
 }
@@ -53,6 +57,7 @@ function renderIngredient(name, image, effect, value, weigth)
     // let Name = document.createElement('H3');
     // Name = name;
     // document.getElementById('ingredientsNames').innerHTML = name;
+    document.getElementById('ingredientsEffects').innerHTML='<h1 " ABICHUELAAA" />';
     
     // Element
     const elemento = document.getElementById('ingredientsNames');
